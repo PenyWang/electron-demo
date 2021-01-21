@@ -17,3 +17,16 @@
    npm run build
    npm run package
    ```
+
+## 开发启动electron
+1. 实时热更新
+   ``` js
+   npm run start
+   npm run electron:dev
+   ```
+2. 采用build后的静态文件
+   - 此方式更接近真实环境，但不适合频发操作
+   ``` js
+   npm run build
+   npm run electron:pro
+   ```
