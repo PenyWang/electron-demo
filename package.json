@@ -6,24 +6,31 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "electron": "^11.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
-  "": " // 这里 配置启动文件",
-  "main": "main.js",
+  "// main是electron的入口文件": "",
+  "main": "public/electron.js",
   "homepage": ".",
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "": "// 以下为electron的启动命令。dev代表引用start(http 热更新)，pro代表引用build(静态文件)",
+    "// 以下为开发阶段electron的启动命令。dev代表引用start(http 热更新)，pro代表引用build(静态文件)": "",
     "electron:dev": "cross-env ENV=dev electron .",
     "electron:pro": "cross-env ENV=pro electron .",
-    "package": "electron-packager D://workspace//test//react-electron react-electron --all --out D://workspace//test//react-electron --electron-version 2.0.6"
+    "// 以下是各个平台的打包命令": "",
+    "pack:win": "electron-packager D://workspace//test//react-electron react-electron --all --out D://workspace//test//react-electron//dist --electron-version 2.0.6",
+    "pack:mac": "cross-env ENV=pro electron-builder"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +52,8 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1",
     "electron-packager": "^15.2.0"
   }
 }

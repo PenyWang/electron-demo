@@ -11,22 +11,29 @@
 3. 执行npm i或yarn add 安装项目依赖即可
 
 ## 打包流程注意事项
-1. 需要在package.json的package选项中将项目路径及输出路径改成自己本机的路径
-2. 打包命令
+1. windows打包
+   1. 需要在package.json的package选项中将项目路径及输出路径改成自己本机的路径
+   2. 打包命令
+      ``` js
+      yarn run build
+      yarn run pack:win
+      ```
+2. mac 打包
+   - 打包命令
    ``` js
-   npm run build
-   npm run package
+      yarn run build
+      yarn run pack:mac
    ```
 
 ## 开发启动electron
 1. 实时热更新
    ``` js
-   npm run start
-   npm run electron:dev
+   yarn run start
+   yarn run electron:dev
    ```
 2. 采用build后的静态文件
    - 此方式更接近真实环境，但不适合频发操作
    ``` js
-   npm run build
-   npm run electron:pro
+   yarn run build
+   yarn run electron:pro
    ```
