@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "": " // 这里 配置electron的start，区别于web端的start",
+    "": "// 以下为electron的启动命令。dev代表引用start(http 热更新)，pro代表引用build(静态文件)",
     "electron:dev": "cross-env ENV=dev electron .",
     "electron:pro": "cross-env ENV=pro electron .",
     "package": "electron-packager D://workspace//test//react-electron react-electron --all --out D://workspace//test//react-electron --electron-version 2.0.6"
